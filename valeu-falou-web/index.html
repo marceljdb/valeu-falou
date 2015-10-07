@@ -1,37 +1,87 @@
 <html>
 
 <head> 
-	<Title>Valeu? Falou!</title>
-	   <link href="css/bootstrap.min.css" rel="stylesheet">	
-	   <link href="css/search.css" rel="stylesheet">	
+    <meta charset="utf-8" />
+	<title>Valeu? Falou!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">	
+    <!-- <link href="css/search.css" rel="stylesheet">	-->
+
+    <style type="text/css">
+        .container-titulo {
+            margin-top: 10%;
+            padding: 20px 0 40px;
+        }
+        
+        .titulo {
+            /*margin-top: 10%;*/
+            /*padding: 40px 0;*/
+
+        }
+
+        .sub-titulo {
+            color: #A89999;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .itens li:nth-child(even) {
+            color: #A89999;
+        }
+
+    </style>
 </head>
 
 <body>
-		<div class="container">
-		<div class="row">
-            <div id="custom-search-input">
-				<h2>Valeu?</h2>
-                <div class="input-group col-md-12">
-                    <input type="text" class="  search-query form-control" placeholder="Falou!" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-danger" type="button">
-                            <span class=" glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
+    <div class="container">
+        <div class="row container-titulo">
+            <div class="col-md-12 text-center">
+                <h2 class="titulo">Valeu?</h2>
+                <h5 class="sub-titulo">Falou!</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group has-feedback">
+                    <input id="search-input" type="text" class="form-control input-lg" placeholder="Digite aqui sua duvida" />
+                    <i class="glyphicon glyphicon-search form-control-feedback"></i>
                 </div>
             </div>
-		</div>
-		</div>
+        </div>
 
+        <div class="row">            
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h4>Respostas simples e diretas sobre o que você quiser</h4>
+                <h4>Respostas diretas sobre tudo que você precisa</h4>
+            </div>
+        </div>
 
+        <div class="row">            
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <hr />
+                <ul class="list-inline itens">
+                    <li>filmes</li>
+                    <li>produtos</li>
+                    <li>marcas</li>
+                    <li>jogos</li>
+                    <li>e muito mais...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-	   <!-- jQuery -->
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-
+    <script type="text/javascript">
+        $(function() {
+            
+            $('#search-input').focus();
+            
+        });
+    </script>
 </body>
-
 </html>
